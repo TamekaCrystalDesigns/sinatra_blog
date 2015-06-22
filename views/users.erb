@@ -1,0 +1,10 @@
+<h1>User List</h1>
+
+<ol>
+	<% @users.each do |user| %>
+		<li>
+			<span><%= user.full_name %></span><br/>
+			<span>Email: <%= user.email %></span>
+		</li>
+	<% end %>
+</ol>

@@ -1,0 +1,21 @@
+<% if @user %>
+
+	<h1><%= @user.full_name %></h1>
+		<p><span>Email:</span> <%= @user.email %></p>
+		<p>Post Titles:</p>
+			<ol>
+				<% @user.posts.each do |post| %>
+					<li><%= post.title %></li>
+
+				<% end %>
+
+
+
+			</ol>
+
+
+<% else %>
+
+<h1>No User Found</h1>
+
+<% end %>
